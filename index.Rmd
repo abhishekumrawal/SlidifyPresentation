@@ -79,10 +79,18 @@ qqline(x)
 
 ## Conclusion
 
-The App makes the Exploratory Data Analysis easier, as its just a click away. 
+The App makes the Exploratory Data Analysis easier, as its just a click away. Moreover, visualization of data, outlier detection and normality testing are the common requirements of any further statistical modeling. Hence, before using any data for Modeling and Prediction, this App can be used as a Pre-Processing Tool for it.
 
-Moreover, visualization of data, outlier detection and normality testing are the common requirements of any further statistical modeling. Hence, before using any data for Modeling and Prediction, this App can be used as a Pre-Processing Tool for it.
+Please try out the App online. Thanks for your time in going through the presentation. I hope you appreciate my efforts.
 
-Please try out the App online. 
+### Appendix
 
-Thanks for your time in going through the presentation. I hope you appreciate my efforts.
+The R code which gets evaluated in order to get the plots on slide 4 is as follows. I had put echo = FALSE there to display only the plots. 
+```{r echo=TRUE}
+x<-rnorm(50);y<-rpois(50,3)
+par(mfrow=c(2,2))
+hist(x, col = 'darkgray', border = 'white', main="Histogram", xlab= "Data")
+barplot(y, col = 'darkgray', border = 'white', main="Bar Plot", xlab= "Data")
+boxplot(x, main="Boxplot")
+qqnorm(x);qqline(x)
+```

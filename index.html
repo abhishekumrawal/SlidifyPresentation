@@ -115,13 +115,23 @@
     <h2>Conclusion</h2>
   </hgroup>
   <article data-timings="">
-    <p>The App makes the Exploratory Data Analysis easier, as its just a click away. </p>
+    <p>The App makes the Exploratory Data Analysis easier, as its just a click away. Moreover, visualization of data, outlier detection and normality testing are the common requirements of any further statistical modeling. Hence, before using any data for Modeling and Prediction, this App can be used as a Pre-Processing Tool for it.</p>
 
-<p>Moreover, visualization of data, outlier detection and normality testing are the common requirements of any further statistical modeling. Hence, before using any data for Modeling and Prediction, this App can be used as a Pre-Processing Tool for it.</p>
+<p>Please try out the App online. Thanks for your time in going through the presentation. I hope you appreciate my efforts.</p>
 
-<p>Please try out the App online. </p>
+<h3>Appendix</h3>
 
-<p>Thanks for your time in going through the presentation. I hope you appreciate my efforts.</p>
+<p>The R code which gets evaluated in order to get the plots on slide 4 is as follows. I had put echo = FALSE there to display only the plots. </p>
+
+<pre><code class="r">x&lt;-rnorm(50);y&lt;-rpois(50,3)
+par(mfrow=c(2,2))
+hist(x, col = &#39;darkgray&#39;, border = &#39;white&#39;, main=&quot;Histogram&quot;, xlab= &quot;Data&quot;)
+barplot(y, col = &#39;darkgray&#39;, border = &#39;white&#39;, main=&quot;Bar Plot&quot;, xlab= &quot;Data&quot;)
+boxplot(x, main=&quot;Boxplot&quot;)
+qqnorm(x);qqline(x)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-2.png" alt="plot of chunk unnamed-chunk-2"> </p>
 
   </article>
   <!-- Presenter Notes -->
